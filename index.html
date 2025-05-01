@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YumBites - Fresh & Tasty</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script>
+        function isMobileDevice() {
+            return /android|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase());
+        }
+
+        const link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = isMobileDevice() ? "mobile.css" : "style.css";
+        document.head.appendChild(link);
+    </script>
+    <style>
+        #Food3 {
+            height: 250px;
+            width: 500px;
+        }
+        #Food2 {
+            height: 250px;
+            width: 500px;
+        }
+        #Food1 {
+            height: 250px;
+            width: 500px;
+        }
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #f8f9fa;
+        }
+
+        .hero {
+            background: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092') no-repeat center center/cover;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 4px #000;
+        }
+
+        .card img {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .stats {
+            background: #ff5722;
+            color: white;
+            padding: 40px 0;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 50%;
+            background-size: 50% 50%;
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 5%;
+        }
+        #logo {
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="Logo.png" id="logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero text-center">
+        <div>
+            <h1 class="display-3">Fresh. Fast. Delicious.</h1>
+            <p class="lead">Order your favorite meals with just a click!</p>
+            <a href="#menu" class="btn btn-warning btn-lg">See Menu</a>
+        </div>
+    </section>
+
+    <section class="container py-5" id="menu">
+        <h2 class="text-center mb-4">Our Best Sellers</h2>
+        <div id="foodCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row justify-content-center">
+                        <div class="col-md-6">
+                            <div class="card text-center">
+                                <img src="Burger.png"
+                                    class="card-img-top" alt="Burger">
+                                <div class="card-body">
+                                    <h5 class="card-title">Cheesy Burger</h5>
+                                    <p class="card-text">Juicy beef patty, cheddar cheese, and fresh veggies.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row justify-content-center">
+                        <div class="col-md-6">
+                            <div class="card text-center">
+                                <img src="PeporoniPizza.png"
+                                    class="card-img-top" alt="Pizza">
+                                <div class="card-body">
+                                    <h5 class="card-title">Pepperoni Pizza</h5>
+                                    <p class="card-text">Hot & cheesy with classic pepperoni on a crispy crust.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row justify-content-center">
+                        <div class="col-md-6">
+                            <div class="card text-center">
+                                <img src="Taco.png"
+                                    class="card-img-top" alt="Tacos">
+                                <div class="card-body">
+                                    <h5 class="card-title">Mexican Tacos</h5>
+                                    <p class="card-text">Soft-shell tacos filled with spicy beef and veggies.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row justify-content-center">
+                        <div class="col-md-6">
+                            <div class="card text-center">
+                                <img src="LavaCake.png"
+                                    class="card-img-top" alt="Dessert">
+                                <div class="card-body">
+                                    <h5 class="card-title">Chocolate Lava Cake</h5>
+                                    <p class="card-text">Warm gooey center served with vanilla ice cream.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#foodCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#foodCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </section>
+
+    <section class="stats text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h2>500+</h2>
+                    <p>Dishes Sold</p>
+                </div>
+                <div class="col-md-3">
+                    <h2>1K+</h2>
+                    <p>Happy Customers</p>
+                </div>
+                <div class="col-md-3">
+                    <h2>24/7</h2>
+                    <p>Delivery</p>
+                </div>
+                <div class="col-md-3">
+                    <h2>50+</h2>
+                    <p>Menu Items</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container py-5" id="gallery">
+  <h2 class="text-center mb-4">Gallery</h2>
+  <div class="row g-3">
+    <div class="col-md-4">
+      <img src="1.png" class="img-fluid" alt="Food 1" id="Food1">
+    </div>
+    <div class="col-md-4">
+      <img src="2.jpeg" class="img-fluid" alt="Food 2" id="Food2">
+    </div>
+    <div class="col-md-4">
+      <img src="3.jpg" class="img-fluid" alt="Food 3" id="Food3">
+    </div>
+  </div>
+</section>
+
+
+    <section class="container py-5" id="reviews">
+        <h2 class="text-center mb-4">Customer Reviews</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <blockquote class="blockquote">
+                    <p>“The food was absolutely delicious and the delivery was super quick!”</p>
+                    <footer class="blockquote-footer">Dinar</footer>
+                </blockquote>
+            </div>
+            <div class="col-md-4">
+                <blockquote class="blockquote">
+                    <p>“Loved the presentation and taste. Will definitely order again!”</p>
+                    <footer class="blockquote-footer">Oishi.</footer>
+                </blockquote>
+            </div>
+            <div class="col-md-4">
+                <blockquote class="blockquote">
+                    <p>“Best online food ordering experience I’ve had in a while.”</p>
+                    <footer class="blockquote-footer">Jahangir</footer>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center p-4" id="contact">
+        <p>© 2025 YumBites. All Rights Reserved.</p>
+        <p>Email: support@yumbites.com | Phone: +123-456-7890</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
